@@ -1,0 +1,81 @@
+# WordPress Core Files
+# We don't track WordPress core as it updates frequently
+website/ericayangrealtor/wp-admin/
+website/ericayangrealtor/wp-includes/
+website/ericayangrealtor/wp-*.php
+website/ericayangrealtor/xmlrpc.php
+website/ericayangrealtor/readme.html
+website/ericayangrealtor/license.txt
+
+# Configuration files with sensitive data
+website/ericayangrealtor/wp-config.php
+
+# Legacy directory - don't track at all
+website/wp-admin/
+website/wp-includes/
+website/wp-*.php
+website/xmlrpc.php
+website/readme.html
+website/license.txt
+website/cgi-bin/
+website/.well-known/
+website/.htaccess*
+website/.ftpquota
+website/index.php
+
+# Uploads directory (too large for git)
+website/ericayangrealtor/wp-content/uploads/
+
+# Cache and temporary files
+website/ericayangrealtor/wp-content/cache/
+website/ericayangrealtor/wp-content/backup*/
+website/ericayangrealtor/wp-content/backups/
+website/ericayangrealtor/wp-content/upgrade/
+website/ericayangrealtor/wp-content/upgrade-temp-backup/
+website/ericayangrealtor/wp-content/litespeed/
+*.log
+error_log
+
+# Database backups
+*.sql
+*.sql.gz
+database_*.sql
+
+# Sensitive files
+.ftpquota
+.DS_Store
+.htaccess.phpupgrader.*
+.htaccess.bk
+
+# Temporary write test files
+temp-write-test-*
+
+# Node modules (if any WordPress plugins use them)
+node_modules/
+vendor/
+
+# Docker volumes (database data)
+docker-compose.override.yml
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# What we DO want to track:
+# - Custom themes (if you create any)
+# - Plugins configuration (but not all plugins - see below)
+# - .htaccess (with local modifications noted)
+# - This .gitignore file
+# - CLAUDE.md and SETUP_GUIDE.md
+# - docker-compose.yml
+
+# Specific plugins to exclude (too large or auto-updated)
+website/ericayangrealtor/wp-content/plugins/akismet/
+website/ericayangrealtor/wp-content/plugins/hello.php
+
+# If you add custom plugins/themes later, track them by uncommenting:
+# !website/ericayangrealtor/wp-content/themes/your-custom-theme/
+# !website/ericayangrealtor/wp-content/plugins/your-custom-plugin/
