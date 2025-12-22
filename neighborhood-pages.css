@@ -1,0 +1,902 @@
+/* NEIGHBORHOOD PAGES CUSTOM STYLES */
+/* Add this CSS to WordPress Customizer → Additional CSS or to your theme's style.css */
+
+/* ===== VARIABLES ===== */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-gray: #f8f9fa;
+    --border-color: #dee2e6;
+    --success-green: #27ae60;
+    --warning-red: #e74c3c;
+}
+
+/* ===== GLOBAL NEIGHBORHOOD PAGE STYLES ===== */
+.neighborhood-page {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HERO SECTION ===== */
+.neighborhood-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 20px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cambridge-hero {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 152, 219, 0.9) 100%),
+                url('cambridge-background.jpg') center/cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.breadcrumbs a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.breadcrumbs a:hover {
+    opacity: 0.7;
+}
+
+.neighborhood-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 15px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.quick-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px 30px;
+    border-radius: 12px;
+    min-width: 180px;
+    transition: transform 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== OVERVIEW SECTION ===== */
+.neighborhood-overview {
+    padding: 60px 20px;
+    background: white;
+}
+
+.neighborhood-overview h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.overview-intro {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* ===== MARKET STATISTICS ===== */
+.market-statistics {
+    padding: 60px 20px;
+    background: var(--light-gray);
+}
+
+.market-statistics h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.stat-card h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.stat-change {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.stat-change.positive {
+    background: #d4edda;
+    color: #155724;
+}
+
+.stat-change.negative {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.data-source {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+/* ===== SCHOOLS SECTION ===== */
+.schools-section {
+    padding: 60px 20px;
+    background: white;
+}
+
+.schools-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.schools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.school-card {
+    background: var(--light-gray);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--secondary-color);
+    transition: transform 0.3s;
+}
+
+.school-card:hover {
+    transform: translateX(5px);
+}
+
+.school-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.school-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.school-type {
+    background: var(--secondary-color);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.school-rating {
+    color: #f39c12;
+}
+
+.university-highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px 0;
+}
+
+.university-highlight h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.university-highlight ul {
+    list-style: none;
+    padding: 0;
+}
+
+.university-highlight li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.university-highlight li::before {
+    content: "🎓";
+    position: absolute;
+    left: 0;
+}
+
+/* ===== AMENITIES SECTION ===== */
+.amenities-section {
+    padding: 60px 20px;
+    background: var(--light-gray);
+}
+
+.amenities-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.amenity-category {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.amenity-icon {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.amenity-category h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.amenity-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.amenity-category li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-left: 20px;
+    position: relative;
+}
+
+.amenity-category li:last-child {
+    border-bottom: none;
+}
+
+.amenity-category li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: bold;
+}
+
+/* ===== TRANSPORTATION SECTION ===== */
+.transportation-section {
+    padding: 60px 20px;
+    background: white;
+}
+
+.transportation-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.transport-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.transport-card {
+    background: var(--light-gray);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.transport-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.transport-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.commute-times {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 40px;
+}
+
+.commute-times h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.commute-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.commute-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.commute-item:last-child {
+    border-bottom: none;
+}
+
+.destination {
+    font-weight: 500;
+}
+
+.time {
+    font-weight: 600;
+}
+
+/* ===== FEATURED LISTINGS ===== */
+.featured-listings {
+    padding: 60px 20px;
+    background: var(--light-gray);
+}
+
+.featured-listings h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.listings-grid {
+    margin: 40px 0;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* ===== PHOTO GALLERY ===== */
+.photo-gallery {
+    padding: 60px 20px;
+    background: white;
+}
+
+.photo-gallery h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 15px;
+    font-weight: 500;
+}
+
+.image-note {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* ===== MAP SECTION ===== */
+.neighborhood-map {
+    padding: 60px 20px;
+    background: var(--light-gray);
+}
+
+.neighborhood-map h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.map-container {
+    margin: 40px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.map-note {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* ===== FAQ SECTION ===== */
+.faq-section {
+    padding: 60px 20px;
+    background: white;
+}
+
+.faq-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--light-gray);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.faq-question {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.faq-answer {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* ===== CONTACT CTA SECTION ===== */
+.contact-cta {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.cta-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-cta h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.cta-subtitle {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.cta-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.cta-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.checkmark {
+    background: rgba(255, 255, 255, 0.2);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.agent-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+}
+
+.agent-photo img {
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.agent-details h3 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.agent-title {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.agent-phone, .agent-email {
+    margin-bottom: 8px;
+}
+
+.agent-phone a, .agent-email a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.agent-phone a:hover, .agent-email a:hover {
+    text-decoration: underline;
+}
+
+.contact-form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    color: var(--text-color);
+}
+
+.contact-form-container h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.cambridge-contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.form-note {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* ===== RELATED NEIGHBORHOODS ===== */
+.related-neighborhoods {
+    padding: 60px 20px;
+    background: var(--light-gray);
+}
+
+.related-neighborhoods h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.related-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.related-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* ===== BUTTONS ===== */
+.button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.button-large {
+    padding: 18px 40px;
+    font-size: 18px;
+}
+
+.cta-button-center {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 768px) {
+    .neighborhood-hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .quick-stats {
+        gap: 15px;
+    }
+
+    .stat-box {
+        min-width: 140px;
+        padding: 15px 20px;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 12px;
+    }
+
+    .neighborhood-overview h2,
+    .market-statistics h2,
+    .schools-section h2,
+    .amenities-section h2,
+    .transportation-section h2,
+    .photo-gallery h2,
+    .neighborhood-map h2,
+    .faq-section h2,
+    .related-neighborhoods h2,
+    .featured-listings h2 {
+        font-size: 28px;
+    }
+
+    .contact-cta h2 {
+        font-size: 32px;
+    }
+
+    .stats-grid,
+    .schools-grid,
+    .amenities-grid,
+    .transport-grid,
+    .gallery-grid,
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .agent-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .commute-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .neighborhood-hero {
+        padding: 60px 15px 40px;
+    }
+
+    .neighborhood-hero h1 {
+        font-size: 26px;
+    }
+
+    .quick-stats {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .stat-box {
+        width: 100%;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
