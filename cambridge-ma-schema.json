@@ -1,0 +1,198 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": "https://ericayangrealtor.com/neighborhoods/cambridge-ma/#place",
+      "name": "Cambridge, Massachusetts",
+      "description": "Cambridge is one of Greater Boston's most vibrant and intellectually rich communities, home to Harvard University and MIT. This diverse city seamlessly blends historic architecture with cutting-edge innovation.",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "42.3736",
+        "longitude": "-71.1097"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cambridge",
+        "addressRegion": "MA",
+        "addressCountry": "US"
+      },
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    },
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://ericayangrealtor.com/#agent",
+      "name": "Erica Yang",
+      "email": "erica@ericayangrealtor.com",
+      "telephone": "XXX-XXX-XXXX",
+      "url": "https://ericayangrealtor.com",
+      "image": "https://ericayangrealtor.com/wp-content/uploads/erica-yang-headshot.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cambridge",
+        "addressRegion": "MA",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Cambridge",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Massachusetts"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Somerville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Massachusetts"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Brookline",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Massachusetts"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Lexington",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Massachusetts"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Belmont",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Massachusetts"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ericayangrealtor.com/neighborhoods/cambridge-ma/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ericayangrealtor.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Neighborhoods",
+          "item": "https://ericayangrealtor.com/neighborhoods/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cambridge, MA",
+          "item": "https://ericayangrealtor.com/neighborhoods/cambridge-ma/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://ericayangrealtor.com/neighborhoods/cambridge-ma/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the cost of living in Cambridge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cambridge has a higher cost of living compared to the national average, primarily driven by housing costs. The median home price is around $1.2M, though prices vary significantly by neighborhood and property type. The premium reflects Cambridge's exceptional location, walkability, schools, cultural amenities, and easy access to Boston. Many residents find the urban lifestyle, lack of car dependency, and proximity to world-class employers justifies the investment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are Cambridge schools good?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cambridge receives an A rating from Niche.com overall. The city's public schools are well-regarded and offer innovative, progressive education with a commitment to diversity and inclusion. However, Cambridge is particularly renowned for its exceptional private schools, including Buckingham Browne & Nichols (BB&N), Shady Hill School, Cambridge Friends School, and Fayerweather Street School, which attract families from across the region. If top-ranked public school systems are your primary priority, nearby communities like Lexington, Belmont, or Brookline are known for their outstanding public schools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Cambridge a good place for families?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Cambridge offers an excellent quality of life for families with diverse educational options (both public and private), numerous parks and playgrounds, family-friendly restaurants, and safe, walkable neighborhoods. The city provides extensive programming through the Cambridge Community Center and public library system. Many families appreciate the cultural diversity, progressive values, and urban convenience while being close to nature along the Charles River."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a car to live in Cambridge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, many Cambridge residents live car-free or with one car per household. The city has excellent public transportation (7 Red Line stations), extensive bus network, bike infrastructure, and high walkability (Walk Score: 90). Most daily errands can be accomplished on foot or bike. However, having a car can be convenient for trips outside the city, especially for families or those commuting to suburbs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the different neighborhoods in Cambridge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cambridge has 13 distinct neighborhoods, each with unique character: Harvard Square (historic, bustling), Central Square (eclectic, artistic), Kendall Square (innovation hub), Porter Square (residential, family-friendly), Inman Square (foodie destination), East Cambridge (up-and-coming), North Cambridge (quiet residential), West Cambridge (upscale, larger homes), and Cambridgeport (diverse, waterfront). Each offers different housing styles, amenities, and vibes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the commute from Cambridge to Boston?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Excellent! The MBTA Red Line provides direct service to Boston's Financial District in 15-20 minutes from most Cambridge stations. You can reach major employment centers like Kendall Square (biotech hub), Longwood Medical Area, and the Seaport District easily. Many Cambridge residents bike across the bridges to Boston in good weather. The city's central location makes commuting straightforward without a car."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of homes are available in Cambridge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cambridge offers diverse housing stock: historic Victorian single-families, charming triple-deckers (three-family homes), modern condos with river views, renovated brownstones, contemporary new construction, and luxury high-rise apartments. Property types range from starter condos around $500K to multi-million dollar single-family estates. The architectural diversity reflects the city's evolution from colonial settlement to modern innovation hub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Cambridge safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cambridge is generally considered a safe city with lower crime rates than many comparable urban areas. Like any city, safety varies by neighborhood and time of day. The Cambridge Police Department is community-focused and responsive. Most neighborhoods are well-lit and actively populated. Residents report feeling comfortable walking in their neighborhoods, and the city invests heavily in public safety infrastructure."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ericayangrealtor.com/neighborhoods/cambridge-ma/#webpage",
+      "url": "https://ericayangrealtor.com/neighborhoods/cambridge-ma/",
+      "name": "Cambridge MA Homes for Sale | Erica Yang Realtor",
+      "description": "Explore homes for sale in Cambridge, MA. Local expert Erica Yang provides market insights, school info, and personalized home searches. Discover Cambridge's vibrant neighborhoods, excellent schools, and urban lifestyle.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://ericayangrealtor.com/#website"
+      },
+      "about": {
+        "@id": "https://ericayangrealtor.com/neighborhoods/cambridge-ma/#place"
+      },
+      "breadcrumb": {
+        "@id": "https://ericayangrealtor.com/neighborhoods/cambridge-ma/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://ericayangrealtor.com/neighborhoods/cambridge-ma/#faq"
+      }
+    }
+  ]
+}
