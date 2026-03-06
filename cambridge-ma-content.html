@@ -339,87 +339,34 @@
     </div>
 </section>
 
-<!-- SECTION 7: Featured Listings -->
-<section class="featured-listings">
+<!-- SECTION 7: Featured Listings - HIDDEN until IDX is set up -->
+<!-- <section class="featured-listings" style="display: none;">
     <div class="container">
         <h2>Current Homes for Sale in Cambridge</h2>
         <p class="section-subtitle">Browse available properties in Cambridge, MA</p>
-
-        <!-- IDX Integration Placeholder -->
         <div class="idx-placeholder">
-            <!-- Insert your IDX plugin shortcode here -->
-            <!-- Example: [idx-listings city="Cambridge" state="MA" limit="8"] -->
             <p><strong>Note to Admin:</strong> Replace this section with your IDX feed filtered for Cambridge, MA listings.</p>
         </div>
-
         <div class="listings-cta">
             <a href="/cambridge-listings/" class="btn btn-primary">View All Cambridge Listings</a>
             <a href="#contact" class="btn btn-secondary">Set Up Custom Home Search</a>
         </div>
     </div>
-</section>
+</section> -->
 
-<!-- SECTION 8: Photo Gallery -->
-<section class="photo-gallery">
+<!-- SECTION 8: Photo Gallery - HIDDEN until images are uploaded -->
+<!-- <section class="photo-gallery" style="display: none;">
     <div class="container">
         <h2>Explore Cambridge Neighborhoods</h2>
         <p class="section-subtitle">Photos of Cambridge's iconic locations</p>
-
         <div class="gallery-grid">
-            <!-- Image 1 -->
             <div class="gallery-item">
-                <img src="/wp-content/uploads/cambridge/harvard-square.jpg"
-                     alt="Harvard Square Cambridge MA - Historic buildings and outdoor seating"
-                     loading="lazy">
+                <img src="/wp-content/uploads/cambridge/harvard-square.jpg" alt="Harvard Square Cambridge MA" loading="lazy">
                 <p class="gallery-caption">Harvard Square</p>
             </div>
-
-            <!-- Image 2 -->
-            <div class="gallery-item">
-                <img src="/wp-content/uploads/cambridge/charles-river.jpg"
-                     alt="Charles River Esplanade Cambridge - Waterfront path with Boston skyline views"
-                     loading="lazy">
-                <p class="gallery-caption">Charles River Esplanade</p>
-            </div>
-
-            <!-- Image 3 -->
-            <div class="gallery-item">
-                <img src="/wp-content/uploads/cambridge/kendall-square.jpg"
-                     alt="Kendall Square Cambridge MA - Modern innovation district"
-                     loading="lazy">
-                <p class="gallery-caption">Kendall Square</p>
-            </div>
-
-            <!-- Image 4 -->
-            <div class="gallery-item">
-                <img src="/wp-content/uploads/cambridge/mit-campus.jpg"
-                     alt="MIT Campus Cambridge - Massachusetts Institute of Technology buildings"
-                     loading="lazy">
-                <p class="gallery-caption">MIT Campus</p>
-            </div>
-
-            <!-- Image 5 -->
-            <div class="gallery-item">
-                <img src="/wp-content/uploads/cambridge/central-square.jpg"
-                     alt="Central Square Cambridge MA - Vibrant urban neighborhood"
-                     loading="lazy">
-                <p class="gallery-caption">Central Square</p>
-            </div>
-
-            <!-- Image 6 -->
-            <div class="gallery-item">
-                <img src="/wp-content/uploads/cambridge/fresh-pond.jpg"
-                     alt="Fresh Pond Reservation Cambridge - Walking trails and nature"
-                     loading="lazy">
-                <p class="gallery-caption">Fresh Pond Reservation</p>
-            </div>
         </div>
-
-        <p class="gallery-note">
-            <em>Photos for illustration purposes. Contact me for a personalized tour of Cambridge neighborhoods.</em>
-        </p>
     </div>
-</section>
+</section> -->
 
 <!-- SECTION 9: Interactive Map -->
 <section class="neighborhood-map">
@@ -506,9 +453,13 @@
     <div class="container">
         <div class="cta-content">
             <div class="agent-info">
-                <img src="/wp-content/uploads/erica-yang-headshot.jpg"
-                     alt="Erica Yang - Cambridge MA Real Estate Agent"
-                     class="agent-photo">
+                <div class="agent-photo-wrapper">
+                    <img src="/wp-content/uploads/erica-yang-headshot.jpg"
+                         alt="Erica Yang - Cambridge MA Real Estate Agent"
+                         class="agent-photo"
+                         onerror="this.style.display='none'">
+                    <div class="agent-photo-fallback" aria-hidden="true">EY</div>
+                </div>
                 <div class="agent-details">
                     <h2>Ready to Find Your Cambridge Home?</h2>
                     <p class="agent-intro">
@@ -517,57 +468,47 @@
                     <p>
                         I provide personalized service, in-depth market knowledge, and expert guidance throughout your home search. Let's discuss your needs and find your ideal Cambridge neighborhood.
                     </p>
-
                     <div class="contact-methods">
-                        <p><strong>📞 Phone:</strong> <a href="tel:XXX-XXX-XXXX">XXX-XXX-XXXX</a></p>
-                        <p><strong>📧 Email:</strong> <a href="mailto:erica@ericayangrealtor.com">erica@ericayangrealtor.com</a></p>
+                        <p><strong>&#x1F4DE; Phone:</strong> <a href="tel:617-401-7398">617-401-7398</a></p>
+                        <p><strong>&#x1F4E7; Email:</strong> <a href="mailto:erica.yang@cbrealty.com">erica.yang@cbrealty.com</a></p>
                     </div>
                 </div>
             </div>
-
-            <div class="contact-form-container">
-                <h3>Get Your Free Cambridge Market Report</h3>
-                <p>Receive detailed market statistics, recent sales, and current listings in Cambridge neighborhoods.</p>
-
-                <!-- Contact Form -->
-                <form class="neighborhood-contact-form" action="/form-handler" method="POST">
-                    <input type="hidden" name="neighborhood" value="Cambridge, MA">
-
+            <div class="contact-form">
+                <h3>Send Me a Message</h3>
+                <p>Interested in Cambridge homes? I'll get back to you within 24 hours.</p>
+                <form class="neighborhood-contact-form" method="post" action="mailto:erica.yang@cbrealty.com" enctype="text/plain">
                     <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="cambridge-name">Your Name *</label>
+                        <input type="text" id="cambridge-name" name="name" placeholder="Jane Smith" required>
                     </div>
-
                     <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="cambridge-email">Email Address *</label>
+                        <input type="email" id="cambridge-email" name="email" placeholder="jane@example.com" required>
                     </div>
-
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
+                        <label for="cambridge-phone">Phone Number</label>
+                        <input type="tel" id="cambridge-phone" name="phone" placeholder="617-555-0100">
                     </div>
-
                     <div class="form-group">
-                        <label for="timeline">When are you looking to buy?</label>
-                        <select id="timeline" name="timeline">
-                            <option value="">Select timeline...</option>
-                            <option value="0-3 months">0-3 months</option>
-                            <option value="3-6 months">3-6 months</option>
-                            <option value="6-12 months">6-12 months</option>
-                            <option value="12+ months">12+ months</option>
-                            <option value="just researching">Just researching</option>
+                        <label for="cambridge-timeline">When are you looking to buy?</label>
+                        <select id="cambridge-timeline" name="timeline">
+                            <option value="">Select a timeframe</option>
+                            <option value="asap">As soon as possible</option>
+                            <option value="3months">Within 3 months</option>
+                            <option value="6months">3–6 months</option>
+                            <option value="year">6–12 months</option>
+                            <option value="exploring">Just exploring</option>
                         </select>
                     </div>
-
                     <div class="form-group">
-                        <label for="message">What are you looking for in Cambridge?</label>
-                        <textarea id="message" name="message" rows="4" placeholder="e.g., 3BR condo near Red Line, family home with yard, etc."></textarea>
+                        <label for="cambridge-message">Message</label>
+                        <textarea id="cambridge-message" name="message" rows="3" placeholder="Tell me what you're looking for in Cambridge..."></textarea>
                     </div>
-
-                    <button type="submit" class="btn btn-primary btn-large">Get My Free Market Report</button>
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
                 </form>
             </div>
+
         </div>
     </div>
 </section>
@@ -577,35 +518,27 @@
     <div class="container">
         <h2>Explore Nearby Communities</h2>
         <p class="section-subtitle">Considering other Greater Boston neighborhoods?</p>
-
-        <div class="neighborhoods-grid">
-            <div class="neighborhood-card">
-                <h3>Somerville, MA</h3>
-                <p>Cambridge's neighbor to the north, offering similar urban lifestyle at slightly lower prices. Hip, diverse, and rapidly developing.</p>
-                <a href="/neighborhoods/somerville-ma/" class="btn btn-secondary">Explore Somerville</a>
-            </div>
-
-            <div class="neighborhood-card">
-                <h3>Brookline, MA</h3>
-                <p>Upscale community with top-rated public schools, tree-lined streets, and easy access to Boston. Great for families.</p>
-                <a href="/neighborhoods/brookline-ma/" class="btn btn-secondary">Explore Brookline</a>
-            </div>
-
-            <div class="neighborhood-card">
+        <div class="related-grid">
+            <div class="related-card">
                 <h3>Lexington, MA</h3>
-                <p>Historic suburb with excellent public schools, large homes, and strong sense of community. Perfect for families prioritizing education.</p>
+                <p>Nationally top-ranked public schools, Revolutionary War history, and a welcoming family community along the Minuteman Bikeway. Ideal for families prioritizing the best public education.</p>
                 <a href="/neighborhoods/lexington-ma/" class="btn btn-secondary">Explore Lexington</a>
             </div>
-
-            <div class="neighborhood-card">
-                <h3>Belmont, MA</h3>
-                <p>Quiet residential town with top-tier public schools, safe neighborhoods, and easy commute to Cambridge and Boston.</p>
-                <a href="/neighborhoods/belmont-ma/" class="btn btn-secondary">Explore Belmont</a>
+            <div class="related-card">
+                <h3>Somerville, MA</h3>
+                <p>Cambridge's neighbor to the north, offering a similar urban lifestyle with a vibrant arts scene, excellent restaurants, and Green Line access — often at slightly lower prices.</p>
+                <a href="/neighborhoods/somerville-ma/" class="btn btn-secondary">Explore Somerville</a>
             </div>
-        </div>
-
-        <div class="all-neighborhoods-link">
-            <a href="/neighborhoods/" class="btn btn-outline">View All Neighborhoods</a>
+            <div class="related-card">
+                <h3>Brookline, MA</h3>
+                <p>Upscale, walkable, with outstanding public schools and easy Green Line access to Boston. A top choice for families who want top-tier public education close to the city.</p>
+                <a href="/neighborhoods/brookline-ma/" class="btn btn-secondary">Explore Brookline</a>
+            </div>
+            <div class="related-card">
+                <h3>Arlington, MA</h3>
+                <p>A welcoming, diverse community along the Minuteman Bikeway with strong schools and a lively Massachusetts Avenue corridor — often more affordable than Cambridge or Lexington.</p>
+                <a href="/neighborhoods/arlington-ma/" class="btn btn-secondary">Explore Arlington</a>
+            </div>
         </div>
     </div>
 </section>

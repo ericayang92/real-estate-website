@@ -489,9 +489,13 @@
     <div class="container">
         <div class="cta-content">
             <div class="agent-info">
-                <img src="/wp-content/uploads/erica-yang-headshot.jpg"
-                     alt="Erica Yang - Lexington MA Real Estate Agent"
-                     class="agent-photo">
+                <div class="agent-photo-wrapper">
+                    <img src="/wp-content/uploads/erica-yang-headshot.jpg"
+                         alt="Erica Yang - Lexington MA Real Estate Agent"
+                         class="agent-photo"
+                         onerror="this.style.display='none'">
+                    <div class="agent-photo-fallback" aria-hidden="true">EY</div>
+                </div>
                 <div class="agent-details">
                     <h2>Ready to Find Your Dream Home in Lexington?</h2>
                     <p class="agent-intro">
@@ -500,18 +504,47 @@
                     <p>
                         Whether you're relocating to Lexington for the schools, seeking a safe and welcoming community for your family, or making a strategic long-term real estate investment, I provide personalized guidance, honest counsel, and expert negotiation to help you find the right home at the right price. Let's start the conversation.
                     </p>
-
                     <div class="contact-methods">
                         <p><strong>&#x1F4DE; Phone:</strong> <a href="tel:617-401-7398">617-401-7398</a></p>
                         <p><strong>&#x1F4E7; Email:</strong> <a href="mailto:erica.yang@cbrealty.com">erica.yang@cbrealty.com</a></p>
                     </div>
                 </div>
             </div>
-
             <div class="contact-form">
                 <h3>Send Me a Message</h3>
-                [contact-form-7 id="contact-form" title="Neighborhood Inquiry"]
+                <p>Interested in Lexington homes or schools? I'll get back to you within 24 hours.</p>
+                <form class="neighborhood-contact-form" method="post" action="mailto:erica.yang@cbrealty.com" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="lexington-name">Your Name *</label>
+                        <input type="text" id="lexington-name" name="name" placeholder="Jane Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lexington-email">Email Address *</label>
+                        <input type="email" id="lexington-email" name="email" placeholder="jane@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lexington-phone">Phone Number</label>
+                        <input type="tel" id="lexington-phone" name="phone" placeholder="617-555-0100">
+                    </div>
+                    <div class="form-group">
+                        <label for="lexington-timeline">When are you looking to buy?</label>
+                        <select id="lexington-timeline" name="timeline">
+                            <option value="">Select a timeframe</option>
+                            <option value="asap">As soon as possible</option>
+                            <option value="3months">Within 3 months</option>
+                            <option value="6months">3–6 months</option>
+                            <option value="year">6–12 months</option>
+                            <option value="exploring">Just exploring</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lexington-message">Message</label>
+                        <textarea id="lexington-message" name="message" rows="3" placeholder="Tell me what you're looking for in Lexington..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
             </div>
+
         </div>
     </div>
 </section>

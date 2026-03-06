@@ -165,6 +165,22 @@ p {
     color: #fff;
 }
 
+/* Reset any theme-level text-stroke / text-shadow on all hero text */
+.neighborhood-hero h1,
+.neighborhood-hero h2,
+.neighborhood-hero p,
+.neighborhood-hero .stat-value,
+.neighborhood-hero .stat-label,
+.neighborhood-hero .hero-subtitle,
+.neighborhood-hero .breadcrumbs,
+.neighborhood-hero .breadcrumbs a {
+    -webkit-text-stroke: 0 transparent;
+    text-stroke: 0 transparent;
+    text-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .neighborhood-hero h1 {
     color: #fff;
     font-size: 3rem;
@@ -187,8 +203,10 @@ p {
 .stat-item {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    padding: 24px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -679,12 +697,96 @@ p {
     align-items: flex-start;
 }
 
+/* Photo wrapper — provides a circular fallback when image is missing */
+.agent-photo-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
 .agent-photo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid rgba(255, 255, 255, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    display: block;
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+
+/* Fallback avatar shown when photo fails to load (onerror hides the img) */
+.agent-photo-fallback {
+    position: absolute;
+    inset: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.05em;
+    z-index: 1;
+}
+
+/* Use the contact-form class the same as contact-form-container */
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-form h3 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form > p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+}
+
+/* Also add .related-grid as alias to .neighborhoods-grid */
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 2rem;
+}
+
+.related-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #e9ecef;
+}
+
+.related-card:hover {
+    border-color: #2c5aa0;
+    box-shadow: 0 5px 20px rgba(44, 90, 160, 0.15);
+    transform: translateY(-5px);
+}
+
+.related-card h3 {
+    color: #2c5aa0;
+    margin-bottom: 1rem;
+}
+
+.related-card p {
+    margin-bottom: 1.5rem;
 }
 
 .agent-details p {
