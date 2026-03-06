@@ -374,26 +374,18 @@
         <h2>Cambridge Location & Amenities Map</h2>
         <p class="section-subtitle">Explore Cambridge's neighborhoods and key locations</p>
 
-        <!-- Google Map Embed -->
+        <!-- Map initialized by erica-leaflet-map.php mu-plugin -->
         <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23777.123456789!2d-71.1097!3d42.3736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370a5cb30cc5f%3A0xc53a8e6489686c87!2sCambridge%2C%20MA!5e0!3m2!1sen!2sus!4v1234567890"
-                width="100%"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <div id="cambridge-map" style="width:100%;height:450px;"></div>
         </div>
 
         <div class="map-legend">
             <h3>Key Locations</h3>
             <ul>
-                <li>🔴 Red Line Stations (7 stops in Cambridge)</li>
-                <li>🟢 Parks & Recreation Areas</li>
-                <li>🔵 Shopping & Dining Districts</li>
-                <li>🟡 Schools & Universities</li>
+                <li><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#e74c3c;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.4);vertical-align:middle;margin-right:6px;"></span> Red Line Stations (6 stops in Cambridge)</li>
+                <li><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#27ae60;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.4);vertical-align:middle;margin-right:6px;"></span> Parks &amp; Recreation Areas</li>
+                <li><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#2980b9;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.4);vertical-align:middle;margin-right:6px;"></span> Shopping &amp; Dining Districts</li>
+                <li><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#e6b800;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.4);vertical-align:middle;margin-right:6px;"></span> Schools &amp; Universities</li>
             </ul>
         </div>
     </div>
