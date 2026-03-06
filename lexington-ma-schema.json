@@ -1,0 +1,150 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "name": "Lexington, Massachusetts",
+      "description": "Historic town in Middlesex County, Massachusetts, known for its role in the American Revolution and its top-ranked public school system. One of the most sought-after suburban communities in Greater Boston.",
+      "url": "https://ericayangrealtor.com/neighborhoods/lexington-ma/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "42.4473",
+        "longitude": "-71.2245"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lexington",
+        "addressRegion": "MA",
+        "postalCode": "02420",
+        "addressCountry": "US"
+      },
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    },
+    {
+      "@type": "RealEstateAgent",
+      "name": "Erica Yang",
+      "url": "https://ericayangrealtor.com",
+      "telephone": "XXX-XXX-XXXX",
+      "email": "erica@ericayangrealtor.com",
+      "areaServed": [
+        "Lexington, MA",
+        "Cambridge, MA",
+        "Belmont, MA",
+        "Brookline, MA",
+        "Waltham, MA",
+        "Arlington, MA"
+      ],
+      "description": "Expert realtor specializing in Greater Boston real estate, including Lexington's top school district communities."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ericayangrealtor.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Neighborhoods",
+          "item": "https://ericayangrealtor.com/neighborhoods/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Lexington, MA",
+          "item": "https://ericayangrealtor.com/neighborhoods/lexington-ma/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "Lexington MA Homes for Sale | Erica Yang Realtor",
+      "description": "Explore homes for sale in Lexington, MA. Local expert Erica Yang provides market insights, school info, and personalized home searches in one of Massachusetts' top-ranked school districts.",
+      "url": "https://ericayangrealtor.com/neighborhoods/lexington-ma/",
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "Place",
+        "name": "Lexington, Massachusetts"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Erica Yang"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are Lexington schools really as good as people say?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lexington Public Schools earn an A+ rating from Niche.com and are consistently ranked among the top 5-10 public school districts in all of Massachusetts. Lexington High School regularly appears on national lists of the best public high schools. The district boasts exceptional test scores, a high percentage of AP course takers, and outstanding college placement results including admissions to Ivy League and top technical universities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the typical home price range in Lexington, MA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington is a premium market. Single-family homes typically range from approximately $1,000,000 for smaller or older homes needing updates to $2,500,000+ for newer construction and larger properties. The median single-family home price is around $1,750,000. Condominiums and townhomes can start around $600,000. Buyers should be prepared for competitive, often multiple-offer situations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the commute from Lexington to Boston?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By car via Route 2, the commute to downtown Boston or Cambridge takes about 25-35 minutes off-peak and 45-60 minutes during peak rush hours. Many residents drive to Alewife Station (Red Line) in about 20-25 minutes or take the MBTA Route 76 bus to Alewife. Total transit commute is typically 50-70 minutes. Lexington is also adjacent to the Route 128 tech/biotech corridor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Lexington a good place for families with young children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington is frequently cited as one of the best communities in New England for raising a family. Outstanding public schools K-12, abundant parks and conservation land including 1,700+ acres, the Minuteman Bikeway, active youth sports leagues, low crime rates, and a tight-knit community culture make it exceptional for families."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are property taxes like in Lexington, MA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington's property tax rate is approximately $13-15 per $1,000 of assessed value. On a home assessed at $1,500,000, annual property taxes would be approximately $20,000-$22,500. While not the lowest in the region, Lexington's taxes directly fund its exemplary school system and excellent public services — a tradeoff most residents consider well worth it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How competitive is the Lexington real estate market?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Very competitive. Lexington consistently operates in a seller's market due to high demand from school-district-focused buyers and limited inventory. Well-priced, move-in-ready homes routinely receive multiple offers within days, often selling above asking price with an average sale-to-list ratio exceeding 100%. Working with an experienced buyer's agent is essential."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What architectural styles of homes are common in Lexington?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington's housing stock includes authentic Colonial and Cape Cod homes from the 18th and 19th centuries, mid-century Ranches and Split-Levels from the 1950s-70s, and newer construction Colonials and Contemporaries from the 1990s through today. Single-family homes dominate, with some townhome and condo developments available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Lexington compare to Belmont and Brookline for schools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All three offer excellent public schools and are top choices for school-focused buyers. Lexington is generally ranked highest, consistently #1 or #2 statewide. Belmont offers a slightly lower price point with A-rated schools. Brookline has A+ schools with an urban-suburban setting closer to Boston. The best choice depends on your commute needs, budget, and lifestyle preferences."
+          }
+        }
+      ]
+    }
+  ]
+}
