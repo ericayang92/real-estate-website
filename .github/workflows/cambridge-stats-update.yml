@@ -1,0 +1,77 @@
+name: Update Cambridge MA Stats
+
+on:
+  # Run on the 1st of every month at 9:00 AM UTC (4 AM ET / 5 AM ET DST)
+  schedule:
+    - cron: "0 9 1 * *"
+  # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-stats:
+    name: Fetch Zillow data & update production
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch Cambridge MA stats from Zillow Research
+        id: fetch_stats
+        run: |
+          echo "Fetching Cambridge MA market data from Zillow Research..."
+          python3 scripts/update_cambridge_stats.py --json > /tmp/cambridge_stats.json
+          cat /tmp/cambridge_stats.json
+
+          # Parse values for logging
+          PRICE=$(jq -r '.median_sale_price' /tmp/cambridge_stats.json)
+          LISTINGS=$(jq -r '.active_listings' /tmp/cambridge_stats.json)
+          DOM=$(jq -r '.days_on_market' /tmp/cambridge_stats.json)
+          UPDATED=$(jq -r '.last_updated' /tmp/cambridge_stats.json)
+
+          echo "median_price=$PRICE" >> "$GITHUB_OUTPUT"
+          echo "active_listings=$LISTINGS" >> "$GITHUB_OUTPUT"
+          echo "days_on_market=$DOM" >> "$GITHUB_OUTPUT"
+          echo "last_updated=$UPDATED" >> "$GITHUB_OUTPUT"
+
+          echo "### Cambridge MA Stats ($UPDATED)" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Metric | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|--------|-------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Median Sale Price | $PRICE |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Active Listings | $LISTINGS |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Avg. Days on Market | $DOM |" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.PROD_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.PROD_SSH_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Update WordPress options on production
+        env:
+          PRICE: ${{ steps.fetch_stats.outputs.median_price }}
+          LISTINGS: ${{ steps.fetch_stats.outputs.active_listings }}
+          DOM: ${{ steps.fetch_stats.outputs.days_on_market }}
+          UPDATED: ${{ steps.fetch_stats.outputs.last_updated }}
+        run: |
+          ssh ${{ secrets.PROD_SSH_USER }}@${{ secrets.PROD_SSH_HOST }} \
+            "cd ~/public_html/ericayangrealtor && \
+             wp option update cambridge_stat_median_price    '${PRICE}'    --allow-root && \
+             wp option update cambridge_stat_active_listings '${LISTINGS}' --allow-root && \
+             wp option update cambridge_stat_days_on_market  '${DOM}'      --allow-root && \
+             wp option update cambridge_stat_last_updated    '${UPDATED}'  --allow-root && \
+             echo 'WordPress options updated.' && \
+             wp litespeed-purge all --allow-root 2>/dev/null || true && \
+             echo 'LiteSpeed cache flushed.'"
+
+      - name: Verify update
+        run: |
+          ssh ${{ secrets.PROD_SSH_USER }}@${{ secrets.PROD_SSH_HOST }} \
+            "cd ~/public_html/ericayangrealtor && wp option get cambridge_stat_median_price --allow-root"

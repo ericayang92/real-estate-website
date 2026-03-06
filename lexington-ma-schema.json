@@ -1,0 +1,188 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": "https://ericayangrealtor.com/neighborhoods/lexington-ma/#place",
+      "name": "Lexington, Massachusetts",
+      "description": "Lexington is a historic and prestigious town northwest of Boston, renowned for its role in the American Revolution and its consistently top-ranked public school system. Known for exceptional schools, beautiful conservation land, and a vibrant town center.",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "42.4473",
+        "longitude": "-71.2322"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lexington",
+        "addressRegion": "MA",
+        "addressCountry": "US"
+      },
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    },
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://ericayangrealtor.com/#agent",
+      "name": "Erica Yang",
+      "email": "erica.yang@cbrealty.com",
+      "telephone": "617-401-7398",
+      "url": "https://ericayangrealtor.com",
+      "image": "https://ericayangrealtor.com/wp-content/uploads/erica-yang-headshot.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lexington",
+        "addressRegion": "MA",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Lexington",
+          "containedInPlace": { "@type": "State", "name": "Massachusetts" }
+        },
+        {
+          "@type": "City",
+          "name": "Cambridge",
+          "containedInPlace": { "@type": "State", "name": "Massachusetts" }
+        },
+        {
+          "@type": "City",
+          "name": "Arlington",
+          "containedInPlace": { "@type": "State", "name": "Massachusetts" }
+        },
+        {
+          "@type": "City",
+          "name": "Belmont",
+          "containedInPlace": { "@type": "State", "name": "Massachusetts" }
+        },
+        {
+          "@type": "City",
+          "name": "Bedford",
+          "containedInPlace": { "@type": "State", "name": "Massachusetts" }
+        },
+        {
+          "@type": "City",
+          "name": "Waltham",
+          "containedInPlace": { "@type": "State", "name": "Massachusetts" }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ericayangrealtor.com/neighborhoods/lexington-ma/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ericayangrealtor.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Neighborhoods",
+          "item": "https://ericayangrealtor.com/neighborhoods/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Lexington, MA",
+          "item": "https://ericayangrealtor.com/neighborhoods/lexington-ma/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://ericayangrealtor.com/neighborhoods/lexington-ma/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How are Lexington's public schools ranked?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington Public Schools are consistently ranked among the top school districts in Massachusetts and the nation. Lexington High School ranks in the top 5% of high schools nationally and is a perennial top-10 finisher in state rankings. The district features rigorous academics, extensive AP and honors programs, outstanding extracurriculars, and exceptional college placement rates. With an A+ rating from Niche.com and near-perfect scores on state assessments, Lexington's schools are a primary reason families choose to live here."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long is the commute from Lexington to Boston?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington is approximately 11 miles northwest of Boston. By car via Route 2, the commute takes 25-40 minutes depending on traffic (longer during peak hours). Many residents take MBTA Bus Routes 62 or 76 to Alewife Station, then the Red Line into Boston — total door-to-door time is typically 45-60 minutes. The Minuteman Bikeway offers a scenic cycling commute to Cambridge (~50 min) and Arlington (~30 min). Many Lexington residents work in the Route 128 tech corridor, making for very short commutes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of homes are available in Lexington?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington is predominantly a single-family home community with beautiful colonial, cape cod, split-level, and contemporary homes on spacious lots. Home prices generally range from $900K for smaller homes to $3M+ for larger new construction or renovated properties, with a median around $1.5M. There are also some condominiums and townhomes, particularly near Lexington Centre, which offer a lower entry price point. The housing stock is generally well-maintained with many mid-century homes undergoing renovations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are property taxes like in Lexington?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington property taxes are higher than many surrounding communities, reflecting the investment in excellent public schools and town services. Homeowners typically pay $19,000-$22,500 annually on a $1.5M home. While this is significant, most families find the premium justified by the outstanding school system, low crime rates, well-maintained infrastructure, and strong property value appreciation. Lexington consistently ranks as one of the top communities for return on investment in real estate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Lexington safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington is consistently ranked as one of the safest communities in Massachusetts and the United States. The town has very low crime rates across all categories and an engaged, community-oriented police department. Neighborhoods are quiet, well-lit, and family-friendly. Children regularly walk and bike to school safely. The strong community fabric, neighborhood watch programs, and town-meeting form of government all contribute to Lexington's exceptionally safe environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the community like in Lexington?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington is a highly educated, diverse, and civic-minded community of approximately 34,000 residents. The town has a significant Asian-American population (approximately 30%), many of whom are professionals in technology, biotech, medicine, and academia. Lexington's historic Town Meeting form of government encourages civic participation. Patriots' Day celebrations each April are a beloved tradition. The community is welcoming to new residents, with numerous organizations and activities for families, seniors, and all ages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What outdoor recreation is available in Lexington?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington offers exceptional outdoor recreation with over 70 miles of conservation land, trails, and open space. The Minuteman Bikeway — a 10-mile paved trail from Lexington to Cambridge through Arlington — is perfect for cycling, running, and walking. Willard's Woods, Great Meadows, Wilson Town Forest, and Pine Meadows Golf Course provide additional outdoor escapes. The town's conservation commission actively manages these spaces. Lexington Community Farm offers CSA shares, and Wilson Farm is a beloved regional destination for fresh produce and seasonal events."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Lexington a good investment for real estate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexington real estate has historically been an excellent long-term investment. The combination of top-ranked schools, limited inventory, strong demand from tech and biotech professionals, and proximity to major employment centers supports sustained price appreciation. Homes frequently sell above asking price, with list-to-sale ratios around 104%. The school district quality acts as a natural floor for property values. While entry prices are high, Lexington homeowners have generally seen consistent appreciation over both short and long holding periods."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ericayangrealtor.com/neighborhoods/lexington-ma/#webpage",
+      "url": "https://ericayangrealtor.com/neighborhoods/lexington-ma/",
+      "name": "Lexington MA Homes for Sale | Erica Yang Realtor",
+      "description": "Explore homes for sale in Lexington, MA. Local expert Erica Yang provides market insights, top-ranked school information, and personalized home searches. Discover Lexington's historic charm, exceptional schools, and welcoming community.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://ericayangrealtor.com/#website"
+      },
+      "about": {
+        "@id": "https://ericayangrealtor.com/neighborhoods/lexington-ma/#place"
+      },
+      "breadcrumb": {
+        "@id": "https://ericayangrealtor.com/neighborhoods/lexington-ma/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://ericayangrealtor.com/neighborhoods/lexington-ma/#faq"
+      }
+    }
+  ]
+}
